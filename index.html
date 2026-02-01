@@ -9,332 +9,296 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="Assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     
     <!-- FlipDown CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="Assets/css/aside_style.css">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="Assets/icon/favicon.png">
 </head>
 <body>
-  <!-- Audio (hidden initially) -->
-  <audio id="myAudio" loop>
+  <audio id="myAudio" autoplay loop>
     <source src="Assets/music/musik.mp3" type="audio/mpeg" />
   </audio>
-  <button id="playButton" class="moon-button" style="display: none;"></button>
-
-  <!-- COVER SECTION (Body.php) - Tampil pertama kali -->
-  <section id="coverSection">
-    <section id="sectionKecil">
-      <div class="cover" id="cover">
-        <img
-          src="Assets/images/Pengantin.jpg"
-          alt="pengantin"
-          class="pengantin" />
-        <p class="gowunbatang-bold">Undangan Pernikahan</p>
-        <h1>Gus Tegar & Gek Dewi</h1>
-        <div class="gowunbatang-bold">
-          Yang Terhormat <br />
-          Bapak/Ibu/Saudara/I
-        </div>
-        <button class="open gowunbatang-bold" id="openInvitation">
-          <img src="Assets/icon/envelope-paper-heart.svg" alt="Icon" />
-          Buka Undangan
-        </button>
-      </div>
-    </section>
+  <button id="playButton" class="moon-button"></button>
+  <section id="sectionBesar" class="scroll-hidden">
+    <div class="pembungkus">
+      <p>THE WEDDING OF</p>
+      <h1>Gus Tegar & Gek Dewi</h1>
+      <p>12 . 10 . 2026</p>
+    </div>
   </section>
-
-  <!-- MAIN CONTENT SECTION (Body_core.php) - Tampil setelah klik tombol -->
-  <section id="mainContent" style="display: none;">
-    <section id="sectionBesar" class="scroll-hidden">
-      <div class="pembungkus">
-        <p>THE WEDDING OF</p>
-        <h1>Gus Tegar & Gek Dewi</h1>
-        <p>12 . 10 . 2026</p>
-      </div>
-    </section>
-    <section id="sectionKecil" class="scroll-hidden">
-      <div class="cover" id="cover">
-        <img
-          src="Assets/images/Pengantin.jpg"
-          alt="pengantin"
-          class="pengantin" />
-        <p class="gowunbatang-bold">The Wedding Of</p>
-        <h1>Gus Tegar & Gek Dewi</h1>
-        <p class="gowunbatang-bold">12 . 10 . 2026</p>
-      </div>
-      <div class="ayat">
-        <p class="gowunbatang-bold judul appear">Rgveda : X.85.36</p>
-        <div class="arab appear">
-          <p>
-            Grbhnāmi te saubhagatvāya hastam,
-            Mayā patyā jaradastir yathāsah,
-            Bhago aryamā savitā puramdhir,
-            Mahyam tvādurgārhapatyāya devāh.
-          </p>
-        </div>
-        <div class="translation appear">
-          <p>
-            "Dalam sebuah pernikahan kalian disatukan demi sebuah kebahagiaan dengan janji hati untuk saling membahagiakan. Bersamaku engkau akan hidup selamanya karena Tuhan pasti akan memberikan karunia sebagai pelindung dan saksi dalam pernikahan ini. Untuk itulah kalian dipersatukan dalam satu keluarga."
-          </p>
-        </div>
-      </div>
-      <div class="mempelai">
-        <img
-          src="Assets/images/omswastiastu.png"
-          alt="Bismillah"
-          class="appear" />
-        <p class="appear">Om Swastyastu</p>
-        <p class="desk appear">
-          Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa / Tuhan Yang Maha Esa,
-          kami dengan penuh rasa syukur mengundang
-          Bapak / Ibu / Saudara / i
-          untuk menghadiri Upacara Manusa Yadnya Pawiwahan
-          kami.
+  <section id="sectionKecil" class="scroll-hidden">
+    <div class="cover" id="cover">
+      <img
+        src="Assets/images/Pengantin.jpg"
+        alt="pengantin"
+        class="pengantin" />
+      <p class="gowunbatang-bold">The Wedding Of</p>
+      <h1>Gus Tegar & Gek Dewi</h1>
+      <p class="gowunbatang-bold">12 . 10 . 2026</p>
+    </div>
+    <div class="ayat">
+      <p class="gowunbatang-bold judul appear">Rgveda : X.85.36</p>
+      <div class="arab appear">
+        <p>
+          Grbhnāmi te saubhagatvāya hastam,
+          Mayā patyā jaradastir yathāsah,
+          Bhago aryamā savitā puramdhir,
+          Mahyam tvādurgārhapatyāya devāh.
         </p>
-        <div class="pengantin-pria appear">
-          <img
-            src="Assets/images/pengantin pria.jpg"
-            alt="pengantin pria"
-            class="foto" />
-          <h1>Gus Tegar</h1>
-          <h3>Ida Bagus Gede Tegar Putra Astawa</h3>
-          <p>
-            Putra Ke 1 Dari <br />
-            Ratu Pranda Gede Sikara Yoga<br />
-            & Ratu Pranda Istri Jineswari
-          </p>
-          <a
-            href="https://www.instagram.com/tegarputraastawa/"
-            target="_blank"
-            class="ig">
-            <img
-              src="Assets/icon/instagram.svg"
-              alt="instagram"
-              class="instagram" />
-            Instagram
-          </a>
-        </div>
-        <div class="dan appear">---- & ----</div>
-        <div class="pengantin-wanita appear">
-          <img
-            src="Assets/images/pengantin wanita.jpeg"
-            alt="pengantin wanita"
-            class="foto" />
-          <h1>Gek Atika</h1>
-          <h3>Ida Ayu Putu Atika Dewi</h3>
-          <p>
-            Putri Ke 1 Dari <br />
-            Ida Bagus Made Wijana<br />
-            & Ida Ayu Putra Sugiantini
-          </p>
-          <a
-            href="https://www.instagram.com/dayuatikad/"
-            target="_blank"
-            class="ig">
-            <img
-              src="Assets/icon/instagram.svg"
-              alt="instagram"
-              class="instagram" />
-            Instagram
-          </a>
-        </div>
       </div>
-      <div class="acara">
-        <div class="resepsi appear">
-          <p class="judul">Resepsi Pernikahan</p>
-          <div class="tanggal">
-            <p class="angka">12</p>
-            <p class="teks">
-              Senin <br />
-              Oktober <br />
-              2026
-            </p>
-          </div>
-          <p class="garis">------------------</p>
-          <p class="Lokasi">
-            Lokasi Acara : <br />
-            Grya Budha Saraswati Senapahan
-          </p>
-        </div>
-        <div class="countdown appear">
-          <h1>Hitung Mundur</h1>
-          <div class="flipdown-container">
-            <div
-              id="flipdown"
-              class="flipdown"
-              style="text-align: center"></div>
-          </div>
-        </div>
+      <div class="translation appear">
+        <p>
+          "Dalam sebuah pernikahan kalian disatukan demi sebuah kebahagiaan dengan janji hati untuk saling membahagiakan. Bersamaku engkau akan hidup selamanya karena Tuhan pasti akan memberikan karunia sebagai pelindung dan saksi dalam pernikahan ini. Untuk itulah kalian dipersatukan dalam satu keluarga."
+        </p>
       </div>
-      <div class="lokasi">
-        <h1 class="appear">Lokasi Acara</h1>
-        <p class="appear">Grya Budha Saraswati Senapahan</p>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.5864578571786!2d115.1496913!3d-8.5394662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23b20d74be4cf%3A0xe7f0ac8242165541!2sGriya%20Budha%20Saraswati%20Senapahan!5e0!3m2!1sid!2sid!4v1769838355407!5m2!1sid!2sid"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          class="maps appear"></iframe>
+    </div>
+    <div class="mempelai">
+      <img
+        src="Assets/images/omswastiastu.png"
+        alt="Bismillah"
+        class="appear" />
+      <p class="appear">Om Swastyastu</p>
+      <p class="desk appear">
+        Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Wasa / Tuhan Yang Maha Esa,
+        kami dengan penuh rasa syukur mengundang
+        Bapak / Ibu / Saudara / i
+        untuk menghadiri Upacara Manusa Yadnya Pawiwahan
+        kami.
+      </p>
+      <div class="pengantin-pria appear">
+        <img
+          src="Assets/images/pengantin pria.jpg"
+          alt="pengantin pria"
+          class="foto" />
+        <h1>Gus Tegar</h1>
+        <h3>Ida Bagus Gede Tegar Putra Astawa</h3>
+        <p>
+          Putra Ke 1 Dari <br />
+          Ratu Pranda Gede Sikara Yoga<br />
+          & Ratu Pranda Istri Jineswari
+        </p>
         <a
-          href="https://maps.app.goo.gl/QUoMQT9UTp2kF9bR9"
+          href="https://www.instagram.com/tegarputraastawa/"
           target="_blank"
-          class="lihatPeta appear">Lihat Lokasi Acara</a>
+          class="ig">
+          <img
+            src="Assets/icon/instagram.svg"
+            alt="instagram"
+            class="instagram" />
+          Instagram
+        </a>
       </div>
-      <div class="galeri">
-        <h1 class="appear">Galeri</h1>
-        <div class="img-container appear">
-          <div class="mySlide">
-            <img src="Assets/images/Pengantin.jpg" alt="pengantin" onclick="openModal(this)" />
-          </div>
-          <div class="mySlide">
-            <img src="Assets/images/pengantin pria.jpg" alt="pengantin pria" onclick="openModal(this)" />
-          </div>
-          <div class="mySlide">
-            <img src="Assets/images/pengantin wanita.jpeg" alt="pengantin wanita" onclick="openModal(this)" />
-          </div>
-          <div class="mySlide">
-            <img src="Assets/images/satu.jpg" alt="satu" onclick="openModal(this)" />
-          </div>
-          <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlide(1)">&#10095;</a>
+      <div class="dan appear">---- & ----</div>
+      <div class="pengantin-wanita appear">
+        <img
+          src="Assets/images/pengantin wanita.jpeg"
+          alt="pengantin wanita"
+          class="foto" />
+        <h1>Gek Atika</h1>
+        <h3>Ida Ayu Putu Atika Dewi</h3>
+        <p>
+          Putri Ke 1 Dari <br />
+          Ida Bagus Made Wijana<br />
+          & Ida Ayu Putra Sugiantini
+        </p>
+        <a
+          href="https://www.instagram.com/dayuatikad/"
+          target="_blank"
+          class="ig">
+          <img
+            src="Assets/icon/instagram.svg"
+            alt="instagram"
+            class="instagram" />
+          Instagram
+        </a>
+      </div>
+    </div>
+    <div class="acara">
+      <div class="resepsi appear">
+        <p class="judul">Resepsi Pernikahan</p>
+        <div class="tanggal">
+          <p class="angka">12</p>
+          <p class="teks">
+            Senin <br />
+            Oktober <br />
+            2026
+          </p>
+        </div>
+        <p class="garis">------------------</p>
+        <p class="Lokasi">
+          Lokasi Acara : <br />
+          Grya Budha Saraswati Senapahan
+        </p>
+      </div>
+      <div class="countdown appear">
+        <h1>Hitung Mundur</h1>
+        <div class="flipdown-container">
+          <div
+            id="flipdown"
+            class="flipdown"
+            style="text-align: center"></div>
         </div>
       </div>
-
-      <div id="imageModal" class="modal">
-        <div class="modal-header">
-          <button onclick="toggleAutoplay()" id="playButtonModal" class="icon-button" title="Play/Pause">
-            <span id="playIcon">▶</span>
-          </button>
-          <button onclick="toggleFullscreen()" class="icon-button" title="Fullscreen">
-            <span>⛶</span>
-          </button>
-          <span class="close" onclick="closeModal()" title="Close">&times;</span>
+    </div>
+    <div class="lokasi">
+      <h1 class="appear">Lokasi Acara</h1>
+      <p class="appear">Grya Budha Saraswati Senapahan</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.5864578571786!2d115.1496913!3d-8.5394662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23b20d74be4cf%3A0xe7f0ac8242165541!2sGriya%20Budha%20Saraswati%20Senapahan!5e0!3m2!1sid!2sid!4v1769838355407!5m2!1sid!2sid"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="maps appear"></iframe>
+      <a
+        href="https://maps.app.goo.gl/QUoMQT9UTp2kF9bR9"
+        target="_blank"
+        class="lihatPeta appear">Lihat Lokasi Acara</a>
+    </div>
+    <div class="galeri">
+      <h1 class="appear">Galeri</h1>
+      <div class="img-container appear">
+        <div class="mySlide">
+          <img src="Assets/images/Pengantin.jpg" alt="pengantin" onclick="openModal(this)" />
         </div>
-
-        <div class="modal-image-container">
-          <img class="modal-content" id="modalImage" />
-          <a class="modal-prev" onclick="changeModalSlide(-1)">&#10094;</a>
-          <a class="modal-next" onclick="changeModalSlide(1)">&#10095;</a>
+        <div class="mySlide">
+          <img src="Assets/images/pengantin pria.jpg" alt="pengantin pria" onclick="openModal(this)" />
         </div>
-
-        <div class="modal-controls">
-          <div class="caption" id="caption"></div>
-          <div class="thumbnail-container" id="thumbnailContainer"></div>
+        <div class="mySlide">
+          <img src="Assets/images/pengantin wanita.jpeg" alt="pengantin wanita" onclick="openModal(this)" />
         </div>
+        <div class="mySlide">
+          <img src="Assets/images/satu.jpg" alt="satu" onclick="openModal(this)" />
+        </div>
+        <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlide(1)">&#10095;</a>
+      </div>
+    </div>
+
+    <!-- Modal untuk memperbesar gambar -->
+    <div id="imageModal" class="modal">
+      <!-- Header dengan tombol kontrol -->
+      <div class="modal-header">
+        <button onclick="toggleAutoplay()" id="playButtonModal" class="icon-button" title="Play/Pause">
+          <span id="playIcon">▶</span>
+        </button>
+        <button onclick="toggleFullscreen()" class="icon-button" title="Fullscreen">
+          <span>⛶</span>
+        </button>
+        <span class="close" onclick="closeModal()" title="Close">&times;</span>
       </div>
 
-      <div class="galeri">
-        <h1 class="appear">-- Video Pernikahan --</h1>
-        <div class="video-wrapper appear" style="margin-bottom: 30px; width: 100%; height: auto;">
-          <iframe
-            src="https://www.youtube.com/embed/1-GLrbJzG3A?si=cYq8_8PYTY-5_F9t"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+      <!-- Gambar utama -->
+      <div class="modal-image-container">
+        <img class="modal-content" id="modalImage" />
+
+        <!-- Tombol navigasi -->
+        <a class="modal-prev" onclick="changeModalSlide(-1)">&#10094;</a>
+        <a class="modal-next" onclick="changeModalSlide(1)">&#10095;</a>
+      </div>
+
+      <!-- Caption dan thumbnails -->
+      <div class="modal-controls">
+        <div class="caption" id="caption"></div>
+
+        <!-- Preview thumbnails -->
+        <div class="thumbnail-container" id="thumbnailContainer">
+          <!-- Thumbnails akan diisi oleh JavaScript -->
         </div>
       </div>
-      <div class="rsvp">
-        <h1 class="appear">RSVP & Ucapan</h1>
-        <form id="rsvpForm" class="appear">
-          <label for="name" style="font-size: 20px">Nama:</label>
-          <input type="text" id="name" name="name" required />
+    </div>
 
-          <div>
-            <p class="confirm">Konfirmasi Kehadiran:</p>
+    <!-- Video Section -->
+    <div class="galeri">
+      <h1 class="appear">-- Video Pernikahan --</h1>
+      <div class="video-wrapper appear" style="margin-bottom: 30px; width: 100%; height: auto;">
+        <iframe
+          src="https://www.youtube.com/embed/1-GLrbJzG3A?si=cYq8_8PYTY-5_F9t"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+    <div class="rsvp">
+      <h1 class="appear">RSVP & Ucapan</h1>
+      <form id="rsvpForm" class="appear">
+        <label for="name" style="font-size: 20px">Nama:</label>
+        <input type="text" id="name" name="name" required />
 
-            <div class="radio-box">
-              <div class="radio-container">
-                <input
-                  type="radio"
-                  id="yes"
-                  name="attendance"
-                  value="Hadir"
-                  required />
-                <label for="yes">Hadir</label>
-              </div>
+        <div>
+          <p class="confirm">Konfirmasi Kehadiran:</p>
 
-              <div class="radio-container">
-                <input
-                  type="radio"
-                  id="no"
-                  name="attendance"
-                  value="Tidak Hadir"
-                  required />
-                <label for="no">Tidak Hadir</label>
-              </div>
+          <div class="radio-box">
+            <div class="radio-container">
+              <input
+                type="radio"
+                id="yes"
+                name="attendance"
+                value="Hadir"
+                required />
+              <label for="yes">Hadir</label>
+            </div>
+
+            <div class="radio-container">
+              <input
+                type="radio"
+                id="no"
+                name="attendance"
+                value="Tidak Hadir"
+                required />
+              <label for="no">Tidak Hadir</label>
             </div>
           </div>
-
-          <label for="message" style="font-size: 20px">Ucapan/Doa:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-
-          <button type="submit">Kirim</button>
-
-          <h2>Daftar Kehadiran & Ucapan</h2>
-          <div id="submittedData"></div>
-        </form>
-      </div>
-      <div class="hadiah">
-        <h1 class="appear">-- Hadiah Pernikahan --</h1>
-        <p class="appear">
-          Kehadiran dan doa restu Anda adalah hadiah terindah bagi kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat menyampaikannya melalui :
-        </p>
-        <div class="card appear">
-          <div class="bank">
-            <img src="Assets/icon/Logo-Bank-BRI.png" alt="bri" />
-            <p>
-              11211211 <br />
-              A/N: Gus Tegar & Gek Dewi
-            </p>
-          </div>
-          <div class="atau">-------- Atau Scan --------</div>
-          <img src="Assets/icon/qris.png" alt="qris" style="width: 80%" />
         </div>
-      </div>
-      <div class="penutup" id="penutup">
-        <img
-          src="Assets/images/Pengantin.jpg"
-          alt="pengantin"
-          class="pengantin" />
-        <p class="gowunbatang-bold">
-          Ungkapan terima kasih yang tulus dari kami apabila
-          Bapak/Ibu/Teman-teman berkenan hadir dan memberikan do'a restu.
-        </p>
-        <p>Om Santhi Santhi Santhi Om</p>
-        <p class="garis">--------------</p>
-        <p class="gowunbatang-bold">Turut berbahagia, segenap keluarga besar</p>
-        <h1>Gus Tegar & Gek Dewi</h1>
-      </div>
-    </section>
-  </section>
 
-  <!-- JavaScript untuk toggle -->
-  <script>
-    document.getElementById('openInvitation').addEventListener('click', function() {
-      // Sembunyikan cover section
-      document.getElementById('coverSection').style.display = 'none';
-      
-      // Tampilkan main content
-      document.getElementById('mainContent').style.display = 'block';
-      
-      // Tampilkan tombol play music
-      document.getElementById('playButton').style.display = 'block';
-      
-      // Play music
-      const audio = document.getElementById('myAudio');
-      audio.play().catch(e => console.log('Audio play failed:', e));
-      
-      // Scroll to top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+        <label for="message" style="font-size: 20px">Ucapan/Doa:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Kirim</button>
+
+        <h2>Daftar Kehadiran & Ucapan</h2>
+        <div id="submittedData"></div>
+      </form>
+    </div>
+    <div class="hadiah">
+      <h1 class="appear">-- Hadiah Pernikahan --</h1>
+      <p class="appear">
+        Kehadiran dan doa restu Anda adalah hadiah terindah bagi kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat menyampaikannya melalui :
+      </p>
+      <div class="card appear">
+        <div class="bank">
+          <img src="Assets/icon/Logo-Bank-BRI.png" alt="bri" />
+          <p>
+            11211211 <br />
+            A/N: Gus Tegar & Gek Dewi
+          </p>
+        </div>
+        <div class="atau">-------- Atau Scan --------</div>
+        <img src="Assets/icon/qris.png" alt="qris" style="width: 80%" />
+      </div>
+    </div>
+    <div class="penutup" id="penutup">
+      <img
+        src="Assets/images/Pengantin.jpg"
+        alt="pengantin"
+        class="pengantin" />
+      <p class="gowunbatang-bold">
+        Ungkapan terima kasih yang tulus dari kami apabila
+        Bapak/Ibu/Teman-teman berkenan hadir dan memberikan do'a restu.
+      </p>
+      <p>Om Santhi Santhi Santhi Om</p>
+      <p class="garis">--------------</p>
+      <p class="gowunbatang-bold">Turut berbahagia, segenap keluarga besar</p>
+      <h1>Gus Tegar & Gek Dewi</h1>
+    </div>
+  </section>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.js"></script>
