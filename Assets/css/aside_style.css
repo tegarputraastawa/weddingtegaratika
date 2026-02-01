@@ -770,9 +770,385 @@ button:hover {
 }
 
 @media (min-width: 768px) {
+  /* ========== PERBAIKAN RSVP SECTION DESKTOP ========== */
+  .rsvp {
+    background-image: url(../images/bg_bunga_2.png);
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: auto;
+    padding: 50px 30px;
+  }
+
+  .rsvp h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 25px;
+  }
+
+  .rsvp h2 {
+    font-family: "Dancing Script", cursive;
+    font-size: 28px;
+    color: var(--primary);
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+
+  /* Form styling desktop */
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  label {
+    font-family: "Gowun Batang", serif;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 15px;
+    margin-bottom: 3px;
+    width: 100%;
+    text-align: left;
+    padding-left: 5px;
+  }
+
+  .confirm {
+    font-size: 15px;
+    color: var(--primary);
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    width: 100%;
+    text-align: center;
+  }
+
+  input[type="text"],
+  textarea {
+    font-family: "Gowun Batang", serif;
+    font-weight: 400;
+    padding: 8px 12px;
+    width: 100%;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    background-color: #ddc0b4;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  .radio-box {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .radio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 120px;
+    padding: 8px 5px;
+    background-color: #ddc0b4;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+  }
+
+  .radio-container label {
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  button[type="submit"] {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Gowun Batang", serif;
+    font-weight: 700;
+    width: 100%;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #1a2332;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  button[type="submit"]:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* ========== SUBMITTED DATA CONTAINER DESKTOP ========== */
+  #submittedData {
+    display: flex !important;
+    flex-direction: column-reverse;
+    margin-top: 15px;
+    width: 100%;
+    min-height: 200px;
+    max-height: 450px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 3px solid #ddc0b4;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  #submittedData::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  #submittedData::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  #submittedData::-webkit-scrollbar-thumb {
+    background: #ddc0b4;
+    border-radius: 10px;
+  }
+
+  #submittedData::-webkit-scrollbar-thumb:hover {
+    background: #c9b0a4;
+  }
+
+  /* ========== RSVP CARD DESKTOP ========== */
+  .rsvp-card {
+    display: block !important;
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    animation: slideInCard 0.3s ease;
+    border-left: 4px solid #ddc0b4;
+    width: 100%;
+  }
+
+  @keyframes slideInCard {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .rsvp-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Header RSVP Card */
+  .rsvp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+
+  .rsvp-header strong {
+    font-size: 15px;
+    color: var(--primary);
+    font-weight: 700;
+    text-align: left;
+    flex: 1;
+    word-break: break-word;
+  }
+
+  /* Status Badge */
+  .status {
+    display: inline-block !important;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .status.hadir {
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+    color: white !important;
+  }
+
+  .status.tidak-hadir {
+    background: linear-gradient(135deg, #f44336 0%, #e53935 100%);
+    color: white !important;
+  }
+
+  /* Message */
+  .rsvp-message {
+    display: block !important;
+    color: #555;
+    line-height: 1.5;
+    margin: 8px 0;
+    padding: 8px 10px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  /* Timestamp */
+  .rsvp-time {
+    display: block !important;
+    color: #999;
+    font-size: 11px;
+    text-align: right;
+    margin-top: 5px;
+    font-style: italic;
+  }
+
+  /* Empty State */
+  .empty-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 15px;
+    width: 100%;
+    min-height: 150px;
+  }
+
+  .empty-state p {
+    font-size: 14px;
+    margin: 0;
+    color: var(--primary);
+    line-height: 1.6;
+  }
+
+  /* ========== NOTIFICATIONS DESKTOP ========== */
+  .success-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+    z-index: 9999;
+    animation: slideInFromRight 0.3s ease;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 250px;
+  }
+
+  .success-notification::before {
+    content: "✓";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    color: #4caf50;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .success-notification.fade-out {
+    animation: fadeOutToRight 0.3s ease forwards;
+  }
+
+  @keyframes slideInFromRight {
+    from {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOutToRight {
+    to {
+      opacity: 0;
+      transform: translateX(400px);
+    }
+  }
+
+  .error-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #f44336 0%, #e53935 100%);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4);
+    z-index: 9999;
+    animation: slideInFromRight 0.3s ease;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 250px;
+  }
+
+  .error-notification::before {
+    content: "✕";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    color: #f44336;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .error-notification.fade-out {
+    animation: fadeOutToRight 0.3s ease forwards;
+  }
   #sectionBesar {
     width: 70vw;
-    background-image: url(../images/pengantin.jpg);
+    background-image: url(../images/cover.jpg);
     background-position: center;
     background-size: cover;
     color: white;
